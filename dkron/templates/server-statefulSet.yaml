@@ -60,7 +60,7 @@ spec:
           lifecycle:
             preStop:
               exec:
-                command: ["./dkron", "leave"]
+                command: ["/usr/local/bin/dkron", "leave"]
           resources:
             {{- toYaml .Values.server.resources | nindent 12 }}
           envFrom:
